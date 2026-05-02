@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom'
 import { useEffect } from 'react'
 import Loader from './Loader.jsx'
-import Cursor from './Cursor.jsx'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
+import ContactCta from './ContactCta.jsx'
 import BackToTop from './BackToTop.jsx'
 import useReveal from '../hooks/useReveal.js'
 
@@ -31,11 +31,11 @@ export default function Layout() {
   return (
     <>
       <Loader />
-      <Cursor />
       <Navbar />
       <main>
         <Outlet />
       </main>
+      <ContactCta />
       <Footer />
       <BackToTop />
     </>

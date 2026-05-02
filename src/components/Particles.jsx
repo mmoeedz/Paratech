@@ -38,7 +38,7 @@ export default function Particles() {
           const max = 130 * window.devicePixelRatio
           if (d2 < max * max) {
             const a = 1 - Math.sqrt(d2) / max
-            ctx.strokeStyle = `rgba(0, 212, 255, ${a * 0.18})`
+            ctx.strokeStyle = `rgba(34, 197, 94, ${a * 0.18})`
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(p.x, p.y)
@@ -51,7 +51,7 @@ export default function Particles() {
         p.x += p.vx; p.y += p.vy
         if (p.x < 0 || p.x > w) p.vx *= -1
         if (p.y < 0 || p.y > h) p.vy *= -1
-        ctx.fillStyle = `rgba(0, 212, 255, ${p.o})`
+        ctx.fillStyle = `rgba(34, 197, 94, ${p.o})`
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r * window.devicePixelRatio, 0, Math.PI * 2)
         ctx.fill()

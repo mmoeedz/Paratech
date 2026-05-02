@@ -1,80 +1,81 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import PageHero from '../components/PageHero.jsx'
 
 const projects = [
-  { thumb: 'Nexora SaaS', cls: 'pt-1', cat: 'websites', tag: 'Website', title: 'Nexora SaaS Platform', desc: 'Modern marketing site with custom animations and CMS integration.' },
-  { thumb: 'Lumière Store', cls: 'pt-2', cat: 'ecommerce', tag: 'E-Commerce', title: 'Lumière Beauty Store', desc: 'Shopify Plus build with conversion-optimized PDP and checkout flow.' },
-  { thumb: 'RankRise', cls: 'pt-3', cat: 'seo', tag: 'SEO', title: 'RankRise Local SEO', desc: 'Grew organic traffic 412% in 6 months for a local services company.' },
-  { thumb: 'Vertex Studio', cls: 'pt-4', cat: 'websites', tag: 'Website', title: 'Vertex Creative Studio', desc: 'Award-style portfolio site with WebGL hero and smooth scroll.' },
-  { thumb: 'Pulse Apparel', cls: 'pt-5', cat: 'ecommerce', tag: 'E-Commerce', title: 'Pulse Apparel', desc: 'Headless commerce build using Next.js and Shopify Storefront API.' },
-  { thumb: 'FinPilot', cls: 'pt-6', cat: 'seo', tag: 'SEO', title: 'FinPilot Content SEO', desc: 'Full content strategy that 5x\u2019d inbound demo requests in one quarter.' },
+  { title: 'City and Beyond', url: 'https://cityandbeyond1.com/' },
+  { title: 'Prestigious Custom Cabinets', url: 'https://prestigiouscustomcabinets.com/' },
+  { title: 'PMZ Mortgage', url: 'https://www.pmzmortgage.com/' },
+  { title: 'DH Driving School', url: 'https://dhdrivingschool.com/' },
+  { title: 'Rami Loans', url: 'https://www.ramiloans.com/' },
+  { title: 'The Rental Authority', url: 'https://www.therentalauthority.com/' },
 ]
 
-const filters = [
-  ['all', 'All'],
-  ['websites', 'Websites'],
-  ['seo', 'SEO'],
-  ['ecommerce', 'E-Commerce'],
-]
+function domain(url) {
+  return url.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '')
+}
+
+function previewUrl(url) {
+  return `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=1200`
+}
 
 export default function Portfolio() {
-  const [active, setActive] = useState('all')
+  const [activeProject, setActiveProject] = useState(null)
+
+  useEffect(() => {
+    document.body.style.overflow = activeProject ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [activeProject])
 
   return (
     <>
       <PageHero
-        eyebrow="Our Work"
-        title="Recent"
-        gradTitle="Projects"
-        description="A glimpse of the brands we've helped scale — from sleek startup sites to enterprise-grade e-commerce platforms."
+        eyebrow="Portfolio"
+        title="Our"
+        gradTitle="Work"
+        description="A selection of live websites we've helped bring online for businesses across service, finance, real estate, and home improvement industries."
         current="Portfolio"
       />
 
-      <section>
+      <section className="portfolio-work-section">
         <div className="container">
-          <div className="filter-tabs reveal">
-            {filters.map(([key, label]) => (
+          <div className="portfolio-work-grid">
+            {projects.map((project, i) => (
               <button
-                key={key}
-                className={`filter-tab${active === key ? ' active' : ''}`}
-                onClick={() => setActive(key)}
+                type="button"
+                key={project.url}
+                className={`portfolio-work-card reveal${i % 3 ? ` delay-${i % 3}` : ''}`}
+                onClick={() => setActiveProject(project)}
+                data-cursor="hover"
               >
-                {label}
+                <span className="portfolio-preview-frame" aria-hidden="true">
+                  <img src={previewUrl(project.url)} alt="" loading="lazy" />
+                </span>
+                <span className="portfolio-preview-overlay">
+                  <span className="portfolio-card-number">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="portfolio-card-title">{project.title}</span>
+                  <span className="portfolio-card-url">{domain(project.url)}</span>
+                  <span className="portfolio-card-action">View inside page <i className="fas fa-arrow-right"></i></span>
+                </span>
               </button>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="portfolio-grid">
-            {projects.map((p, i) => {
-              const hidden = active !== 'all' && p.cat !== active
-              return (
-                <article
-                  key={i}
-                  className={`portfolio-item reveal${i % 3 ? ` delay-${i % 3}` : ''}${hidden ? ' hide' : ''}`}
-                  data-cursor="hover"
-                >
-                  <div className={`portfolio-thumb ${p.cls}`}>{p.thumb}</div>
-                  <div className="portfolio-overlay">
-                    <span className="portfolio-tag">{p.tag}</span>
-                    <h3>{p.title}</h3>
-                    <p>{p.desc}</p>
-                    <Link to="/contact" className="btn-mini">View Project <i className="fas fa-arrow-right"></i></Link>
-                  </div>
-                </article>
-              )
-            })}
+      {activeProject && (
+        <div className="portfolio-viewer" role="dialog" aria-modal="true" aria-label={`${activeProject.title} website preview`}>
+          <div className="portfolio-viewer-bar">
+            <div>
+              <strong>{activeProject.title}</strong>
+              <span>{domain(activeProject.url)}</span>
+            </div>
+            <button type="button" onClick={() => setActiveProject(null)} aria-label="Close preview">
+              <i className="fas fa-times"></i>
+            </button>
           </div>
+          <iframe src={activeProject.url} title={`${activeProject.title} website`} />
         </div>
-      </section>
-
-      <section className="cta-banner">
-        <div className="container reveal">
-          <h2>Want to be <span className="grad">Next?</span></h2>
-          <p>Let&rsquo;s build something great together. Tell us about your project and we&rsquo;ll send back a tailored plan.</p>
-          <Link to="/contact" className="btn btn-primary" data-cursor="hover">Start Your Project <i className="fas fa-arrow-right"></i></Link>
-        </div>
-      </section>
+      )}
     </>
   )
 }

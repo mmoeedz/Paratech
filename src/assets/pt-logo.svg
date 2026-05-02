@@ -1,0 +1,24 @@
+<svg width="250" height="120" viewBox="0 0 250 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="green" x1="36" y1="101" x2="165" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#059647"/>
+      <stop offset="0.52" stop-color="#25C85F"/>
+      <stop offset="1" stop-color="#7EE03E"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="40" y1="18" x2="120" y2="95" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#667079"/>
+      <stop offset="1" stop-color="#263039"/>
+    </linearGradient>
+    <filter id="glow" x="-40" y="-34" width="320" height="190" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.23 0 0 0 0 0.95 0 0 0 0 0.25 0 0 0 0.58 0"/>
+      <feBlend in="SourceGraphic" mode="normal"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <path d="M36 105L53 44H113L101 61C98 66 92 69 84 69H68L59 105H36Z" fill="url(#green)" stroke="#111A20" stroke-width="1"/>
+    <path d="M100 20H210L203 47C201 55 194 59 181 59H156L143 105H116L134 43H105C91 43 83 36 83 24V20H100Z" fill="url(#green)" stroke="#111A20" stroke-width="1"/>
+    <path d="M48 20H112C146 20 170 40 170 68C170 98 146 116 112 116H82L88 91H113C130 91 141 82 141 68C141 53 129 45 109 45H53C37 45 29 38 29 24V20H48Z" fill="url(#dark)" stroke="#111A20" stroke-width="1"/>
+  </g>
+</svg>

@@ -2,36 +2,35 @@ import { useEffect, useState } from 'react'
 
 export default function Typewriter({
   phrases = [
-    'We Build Stunning Websites',
-    'We Rank You #1 on Google',
-    'We Grow Your Business Online',
+    'We Generate Leads, Not Just Websites',
   ],
 }) {
   const [text, setText] = useState('')
+  const [showCursor, setShowCursor] = useState(true)
 
   useEffect(() => {
-    let pi = 0, ci = 0, deleting = false, timer
-    const tick = () => {
-      const cur = phrases[pi]
-      if (!deleting) {
-        ci++
-        setText(cur.slice(0, ci))
-        if (ci === cur.length) { deleting = true; timer = setTimeout(tick, 1800); return }
-        timer = setTimeout(tick, 70)
+    const fullText = phrases[0]
+    let charIndex = 0
+    let timeoutId
+
+    const animate = () => {
+      if (charIndex < fullText.length) {
+        setText(fullText.substring(0, charIndex + 1))
+        charIndex++
+        timeoutId = window.setTimeout(animate, 70)
       } else {
-        ci--
-        setText(cur.slice(0, ci))
-        if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; timer = setTimeout(tick, 250); return }
-        timer = setTimeout(tick, 35)
+        setShowCursor(false)
       }
     }
-    tick()
-    return () => clearTimeout(timer)
+
+    timeoutId = window.setTimeout(animate, 200)
+    return () => window.clearTimeout(timeoutId)
   }, [phrases])
 
   return (
     <span className="gradient typed-wrap">
-      <span>{text}</span><span className="typed-cursor"></span>
+      <span>{text}</span>
+      {showCursor && <span className="typed-cursor"></span>}
     </span>
   )
 }

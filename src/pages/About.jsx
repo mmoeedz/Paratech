@@ -1,31 +1,21 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero.jsx'
 import Counter from '../components/Counter.jsx'
-
-const tech = [
-  ['fab fa-react', 'React'],
-  ['fab fa-wordpress', 'WordPress'],
-  ['fab fa-shopify', 'Shopify'],
-  ['fab fa-node-js', 'Node.js'],
-  ['fab fa-google', 'Google'],
-  ['fab fa-figma', 'Figma'],
-  ['fab fa-html5', 'HTML5'],
-  ['fab fa-css3-alt', 'CSS3'],
-  ['fab fa-js', 'JavaScript'],
-]
+import strategyImage from '../../1.png'
+import growthImage from '../../2.png'
 
 export default function About() {
   return (
     <>
       <PageHero
         eyebrow="About Paratech"
-        title="Built for"
-        gradTitle="Ambitious Brands"
-        description="We're a results-driven digital agency blending creative design, engineering excellence, and growth strategy."
+        title="About"
+        gradTitle="Us"
+        description="A growth-focused digital team helping brands build stronger websites, cleaner visibility, and smarter online systems."
         current="About"
       />
 
-      <section>
+      <section className="about-green-section about-redesign">
         <div className="container">
           <div className="about-grid">
             <div className="about-text reveal">
@@ -45,25 +35,22 @@ export default function About() {
 
             <div className="about-visual reveal delay-2">
               <div className="about-blob" aria-hidden="true"></div>
-              <div className="tech-stack" aria-label="Tech stack">
-                {tech.map(([icon, name]) => (
-                  <div key={name} className="tech-item">
-                    <div className="ti-inner"><i className={icon}></i><span>{name}</span></div>
-                  </div>
-                ))}
+              <div className="about-pictures-group" style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '32px', zIndex: 2 }}>
+                <img src={strategyImage} alt="Digital strategy" style={{ width: '80%', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', alignSelf: 'flex-start' }} />
+                <img src={growthImage} alt="Growth" style={{ width: '80%', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', alignSelf: 'flex-end', marginTop: '-20%' }} />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="stats">
+      <section className="stats about-stats-shade">
         <div className="container">
           <div className="stats-grid">
             <div className="stat-card reveal"><Counter target={200} suffix="+" /><div className="stat-label">Happy Clients</div></div>
-            <div className="stat-card reveal delay-1"><Counter target={500} suffix="+" /><div className="stat-label">Projects Delivered</div></div>
-            <div className="stat-card reveal delay-2"><Counter target={5} suffix="+" /><div className="stat-label">Years Experience</div></div>
-            <div className="stat-card reveal delay-3"><Counter target={98} suffix="%" /><div className="stat-label">Client Satisfaction</div></div>
+            <div className="stat-card reveal delay-1"><Counter target={112} /><div className="stat-label">Professionals Joined Forces</div></div>
+            <div className="stat-card reveal delay-2"><Counter target={8} suffix="+" /><div className="stat-label">Years Experience</div></div>
+            <div className="stat-card reveal delay-3"><Counter target={226} /><div className="stat-label">Businesses Digitalized</div></div>
           </div>
         </div>
       </section>

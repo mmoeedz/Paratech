@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio — Paratech | Recent Projects &amp; Case Studies</title>
+  <meta name="description" content="Browse Paratech's portfolio — websites, SEO programs, e-commerce builds, and growth campaigns delivered for ambitious brands." />
+  <meta name="theme-color" content="#0A0F2C" />
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="%230066FF"/><stop offset="1" stop-color="%2300D4FF"/></linearGradient></defs><rect rx="14" width="64" height="64" fill="%230A0F2C"/><path d="M18 46V18h14a10 10 0 0 1 0 20H26v8z" fill="url(%23g)"/></svg>' />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="portfolio">
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div style="text-align: center;">
+      <div class="loader-logo">Paratech<span style="color: var(--highlight);">.</span></div>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" data-cursor="hover"><span class="dot"></span>Para<span class="grad">tech</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <div class="has-mega" id="servicesMega">
+          <a href="services.html" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down caret"></i></a>
+          <div class="mega" role="menu" aria-label="Services menu">
+            <div class="mega-grid">
+              <div class="mega-col">
+                <h5>Search Engine Optimization</h5>
+                <ul>
+                  <li><a class="mega-link" href="services.html#seo"><span class="mega-icon"><i class="fas fa-map-marker-alt"></i></span><span class="mega-text"><span class="mega-title">Local SEO</span><span class="mega-sub">Dominate local search results</span></span></a></li>
+                  <li><a class="mega-link" href="services.html#seo"><span class="mega-icon"><i class="fas fa-cogs"></i></span><span class="mega-text"><span class="mega-title">Technical SEO</span><span class="mega-sub">Speed, schema, indexing</span></span></a></li>
+                </ul>
+                <h5>Search Engine Marketing</h5>
+                <ul>
+                  <li><a class="mega-link" href="services.html#sem"><span class="mega-icon"><i class="fab fa-google"></i></span><span class="mega-text"><span class="mega-title">Google Ads</span><span class="mega-sub">Search, Display &amp; YouTube</span></span></a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <h5>Web Design &amp; Development</h5>
+                <ul>
+                  <li><a class="mega-link" href="services.html#web"><span class="mega-icon"><i class="fab fa-wordpress"></i></span><span class="mega-text"><span class="mega-title">WordPress Development</span><span class="mega-sub">Custom themes &amp; plugins</span></span></a></li>
+                  <li><a class="mega-link" href="services.html#web"><span class="mega-icon"><i class="fab fa-shopify"></i></span><span class="mega-text"><span class="mega-title">Shopify Development</span><span class="mega-sub">High-converting stores</span></span></a></li>
+                </ul>
+                <h5>Social Media</h5>
+                <ul>
+                  <li><a class="mega-link" href="services.html#social"><span class="mega-icon"><i class="fas fa-share-alt"></i></span><span class="mega-text"><span class="mega-title">Social Media Management</span><span class="mega-sub">Content, ads &amp; community</span></span></a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <h5>Marketing Automation</h5>
+                <ul>
+                  <li><a class="mega-link" href="services.html#auto"><span class="mega-icon"><i class="fas fa-users-cog"></i></span><span class="mega-text"><span class="mega-title">CRM Development</span><span class="mega-sub">Custom CRM &amp; workflows</span></span></a></li>
+                </ul>
+                <h5>Software Development</h5>
+                <ul>
+                  <li><a class="mega-link" href="services.html#software"><span class="mega-icon"><i class="fas fa-mobile-alt"></i></span><span class="mega-text"><span class="mega-title">App Development</span><span class="mega-sub">iOS, Android &amp; cross-platform</span></span></a></li>
+                </ul>
+                <h5>Virtual Assistant</h5>
+                <ul>
+                  <li><a class="mega-link" href="services.html#va"><span class="mega-icon"><i class="fas fa-headset"></i></span><span class="mega-text"><span class="mega-title">Virtual Assistant</span><span class="mega-sub">Dedicated support &amp; ops</span></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-glow" data-cursor="hover">Book Strategy Call <i class="fas fa-arrow-right"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Book Strategy Call</a>
+    </div>
+  </header>
+
+  <!-- ============== PAGE HEADER ============== -->
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow reveal">Our Work</span>
+      <h1 class="reveal delay-1">Recent <span class="grad">Projects</span></h1>
+      <p class="reveal delay-2">A glimpse of the brands we've helped scale — from sleek startup sites to enterprise-grade e-commerce platforms.</p>
+      <div class="breadcrumb reveal delay-3">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Portfolio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PORTFOLIO ============== -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="websites">Websites</button>
+        <button class="filter-tab" data-filter="seo">SEO</button>
+        <button class="filter-tab" data-filter="ecommerce">E-Commerce</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+        <article class="portfolio-item reveal" data-category="websites" data-cursor="hover">
+          <div class="portfolio-thumb pt-1">Nexora SaaS</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">Website</span><h3>Nexora SaaS Platform</h3><p>Modern marketing site with custom animations and CMS integration.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal delay-1" data-category="ecommerce" data-cursor="hover">
+          <div class="portfolio-thumb pt-2">Lumière Store</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">E-Commerce</span><h3>Lumière Beauty Store</h3><p>Shopify Plus build with conversion-optimized PDP and checkout flow.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal delay-2" data-category="seo" data-cursor="hover">
+          <div class="portfolio-thumb pt-3">RankRise</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">SEO</span><h3>RankRise Local SEO</h3><p>Grew organic traffic 412% in 6 months for a local services company.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal" data-category="websites" data-cursor="hover">
+          <div class="portfolio-thumb pt-4">Vertex Studio</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">Website</span><h3>Vertex Creative Studio</h3><p>Award-style portfolio site with WebGL hero and smooth scroll.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal delay-1" data-category="ecommerce" data-cursor="hover">
+          <div class="portfolio-thumb pt-5">Pulse Apparel</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">E-Commerce</span><h3>Pulse Apparel</h3><p>Headless commerce build using Next.js and Shopify Storefront API.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal delay-2" data-category="seo" data-cursor="hover">
+          <div class="portfolio-thumb pt-6">FinPilot</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">SEO</span><h3>FinPilot Content SEO</h3><p>Full content strategy that 5x'd inbound demo requests in one quarter.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal" data-category="websites" data-cursor="hover">
+          <div class="portfolio-thumb pt-3">Helios Health</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">Website</span><h3>Helios Health</h3><p>HIPAA-compliant marketing site with patient portal integration.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal delay-1" data-category="ecommerce" data-cursor="hover">
+          <div class="portfolio-thumb pt-1">Northwind</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">E-Commerce</span><h3>Northwind B2B</h3><p>Custom B2B quoting tool integrated with NetSuite and Salesforce.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+        <article class="portfolio-item reveal delay-2" data-category="seo" data-cursor="hover">
+          <div class="portfolio-thumb pt-4">Coastline Realty</div>
+          <div class="portfolio-overlay"><span class="portfolio-tag">SEO</span><h3>Coastline Realty</h3><p>Local SEO + paid search dropping CPL by 47% in 90 days.</p><a href="contact.html" class="btn-mini">View Project <i class="fas fa-arrow-right"></i></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA ============== -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="contact-form reveal" style="text-align:center; padding: 56px 36px;">
+        <span class="eyebrow">Like what you see?</span>
+        <h2 style="margin: 12px 0 14px;">Let's Build <span style="background: var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;">Yours Next</span></h2>
+        <p style="max-width: 580px; margin: 0 auto 28px;">Tell us what you're working on. We'll come back with a tailored plan and a quote.</p>
+        <a href="contact.html" class="btn btn-primary" data-cursor="hover">Start Your Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="dot"></span>Para<span class="grad">tech</span></a>
+          <p>Building the Future, One Pixel at a Time. Premium web development, SEO, and digital marketing for ambitious brands.</p>
+          <div class="socials">
+            <a class="social-link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a class="social-link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-link" href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Services</h4><ul>
+          <li><a href="services.html#web">Web Development</a></li>
+          <li><a href="services.html#seo">SEO Optimization</a></li>
+          <li><a href="services.html#social">Social Media</a></li>
+          <li><a href="services.html#web">E-Commerce</a></li>
+          <li><a href="services.html#sem">Google Ads</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">SEO Guide</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Paratech. All rights reserved.</span>
+        <span>Made with <i class="fas fa-bolt" style="color: var(--highlight);"></i> in Austin, TX</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

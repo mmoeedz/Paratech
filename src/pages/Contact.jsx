@@ -1,9 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PageHero from '../components/PageHero.jsx'
 
 const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
 
 export default function Contact() {
+  useEffect(() => {
+    document.body.setAttribute('data-page', 'contact')
+    return () => document.body.removeAttribute('data-page')
+  }, [])
   const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' })
   const [errors, setErrors] = useState({})
   const [success, setSuccess] = useState(false)
@@ -61,7 +65,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon"><i className="fas fa-phone"></i></span>
-                  <div><div className="label">Phone</div><div className="val">+1 (111) 222-3333</div></div>
+                  <div><div className="label">Phone</div><div className="val">+1(111) 222 333</div></div>
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon"><i className="fas fa-map-marker-alt"></i></span>

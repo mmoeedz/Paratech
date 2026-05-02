@@ -1,0 +1,682 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": "L1",
+      "id": "eslint_config_js",
+      "community": 18,
+      "norm_label": "eslint.config.js"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": "L1",
+      "id": "vite_config_js",
+      "community": 19,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "src\\App.jsx",
+      "source_location": "L1",
+      "id": "src_app_jsx",
+      "community": 1,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "ScrollToTop()",
+      "file_type": "code",
+      "source_file": "src\\App.jsx",
+      "source_location": "L12",
+      "id": "src_app_scrolltotop",
+      "community": 1,
+      "norm_label": "scrolltotop()"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src\\App.jsx",
+      "source_location": "L18",
+      "id": "src_app_app",
+      "community": 1,
+      "norm_label": "app()"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "src\\main.jsx",
+      "source_location": "L1",
+      "id": "src_main_jsx",
+      "community": 20,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "BackToTop.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\BackToTop.jsx",
+      "source_location": "L1",
+      "id": "src_components_backtotop_jsx",
+      "community": 4,
+      "norm_label": "backtotop.jsx"
+    },
+    {
+      "label": "BackToTop()",
+      "file_type": "code",
+      "source_file": "src\\components\\BackToTop.jsx",
+      "source_location": "L3",
+      "id": "components_backtotop_backtotop",
+      "community": 4,
+      "norm_label": "backtotop()"
+    },
+    {
+      "label": "Counter.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Counter.jsx",
+      "source_location": "L1",
+      "id": "src_components_counter_jsx",
+      "community": 5,
+      "norm_label": "counter.jsx"
+    },
+    {
+      "label": "Counter()",
+      "file_type": "code",
+      "source_file": "src\\components\\Counter.jsx",
+      "source_location": "L3",
+      "id": "components_counter_counter",
+      "community": 5,
+      "norm_label": "counter()"
+    },
+    {
+      "label": "Cursor.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Cursor.jsx",
+      "source_location": "L1",
+      "id": "src_components_cursor_jsx",
+      "community": 6,
+      "norm_label": "cursor.jsx"
+    },
+    {
+      "label": "Cursor()",
+      "file_type": "code",
+      "source_file": "src\\components\\Cursor.jsx",
+      "source_location": "L3",
+      "id": "components_cursor_cursor",
+      "community": 6,
+      "norm_label": "cursor()"
+    },
+    {
+      "label": "Footer.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Footer.jsx",
+      "source_location": "L1",
+      "id": "src_components_footer_jsx",
+      "community": 7,
+      "norm_label": "footer.jsx"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "src\\components\\Footer.jsx",
+      "source_location": "L3",
+      "id": "components_footer_footer",
+      "community": 7,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Layout.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Layout.jsx",
+      "source_location": "L1",
+      "id": "src_components_layout_jsx",
+      "community": 0,
+      "norm_label": "layout.jsx"
+    },
+    {
+      "label": "Layout()",
+      "file_type": "code",
+      "source_file": "src\\components\\Layout.jsx",
+      "source_location": "L10",
+      "id": "components_layout_layout",
+      "community": 0,
+      "norm_label": "layout()"
+    },
+    {
+      "label": "Loader.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Loader.jsx",
+      "source_location": "L1",
+      "id": "src_components_loader_jsx",
+      "community": 8,
+      "norm_label": "loader.jsx"
+    },
+    {
+      "label": "Loader()",
+      "file_type": "code",
+      "source_file": "src\\components\\Loader.jsx",
+      "source_location": "L3",
+      "id": "components_loader_loader",
+      "community": 8,
+      "norm_label": "loader()"
+    },
+    {
+      "label": "Navbar.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Navbar.jsx",
+      "source_location": "L1",
+      "id": "src_components_navbar_jsx",
+      "community": 2,
+      "norm_label": "navbar.jsx"
+    },
+    {
+      "label": "MegaItem()",
+      "file_type": "code",
+      "source_file": "src\\components\\Navbar.jsx",
+      "source_location": "L44",
+      "id": "components_navbar_megaitem",
+      "community": 2,
+      "norm_label": "megaitem()"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "src\\components\\Navbar.jsx",
+      "source_location": "L56",
+      "id": "components_navbar_navbar",
+      "community": 2,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "PageHero.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\PageHero.jsx",
+      "source_location": "L1",
+      "id": "src_components_pagehero_jsx",
+      "community": 9,
+      "norm_label": "pagehero.jsx"
+    },
+    {
+      "label": "PageHero()",
+      "file_type": "code",
+      "source_file": "src\\components\\PageHero.jsx",
+      "source_location": "L3",
+      "id": "components_pagehero_pagehero",
+      "community": 9,
+      "norm_label": "pagehero()"
+    },
+    {
+      "label": "Particles.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Particles.jsx",
+      "source_location": "L1",
+      "id": "src_components_particles_jsx",
+      "community": 10,
+      "norm_label": "particles.jsx"
+    },
+    {
+      "label": "Particles()",
+      "file_type": "code",
+      "source_file": "src\\components\\Particles.jsx",
+      "source_location": "L3",
+      "id": "components_particles_particles",
+      "community": 10,
+      "norm_label": "particles()"
+    },
+    {
+      "label": "Typewriter.jsx",
+      "file_type": "code",
+      "source_file": "src\\components\\Typewriter.jsx",
+      "source_location": "L1",
+      "id": "src_components_typewriter_jsx",
+      "community": 11,
+      "norm_label": "typewriter.jsx"
+    },
+    {
+      "label": "Typewriter()",
+      "file_type": "code",
+      "source_file": "src\\components\\Typewriter.jsx",
+      "source_location": "L3",
+      "id": "components_typewriter_typewriter",
+      "community": 11,
+      "norm_label": "typewriter()"
+    },
+    {
+      "label": "useReveal.js",
+      "file_type": "code",
+      "source_file": "src\\hooks\\useReveal.js",
+      "source_location": "L1",
+      "id": "src_hooks_usereveal_js",
+      "community": 0,
+      "norm_label": "usereveal.js"
+    },
+    {
+      "label": "useReveal()",
+      "file_type": "code",
+      "source_file": "src\\hooks\\useReveal.js",
+      "source_location": "L5",
+      "id": "hooks_usereveal_usereveal",
+      "community": 0,
+      "norm_label": "usereveal()"
+    },
+    {
+      "label": "About.jsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\About.jsx",
+      "source_location": "L1",
+      "id": "src_pages_about_jsx",
+      "community": 12,
+      "norm_label": "about.jsx"
+    },
+    {
+      "label": "About()",
+      "file_type": "code",
+      "source_file": "src\\pages\\About.jsx",
+      "source_location": "L17",
+      "id": "pages_about_about",
+      "community": 12,
+      "norm_label": "about()"
+    },
+    {
+      "label": "Contact.jsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Contact.jsx",
+      "source_location": "L1",
+      "id": "src_pages_contact_jsx",
+      "community": 3,
+      "norm_label": "contact.jsx"
+    },
+    {
+      "label": "isEmail()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Contact.jsx",
+      "source_location": "L4",
+      "id": "pages_contact_isemail",
+      "community": 3,
+      "norm_label": "isemail()"
+    },
+    {
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Contact.jsx",
+      "source_location": "L6",
+      "id": "pages_contact_contact",
+      "community": 3,
+      "norm_label": "contact()"
+    },
+    {
+      "label": "Home.jsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Home.jsx",
+      "source_location": "L1",
+      "id": "src_pages_home_jsx",
+      "community": 13,
+      "norm_label": "home.jsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Home.jsx",
+      "source_location": "L15",
+      "id": "pages_home_home",
+      "community": 13,
+      "norm_label": "home()"
+    },
+    {
+      "label": "NotFound.jsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\NotFound.jsx",
+      "source_location": "L1",
+      "id": "src_pages_notfound_jsx",
+      "community": 14,
+      "norm_label": "notfound.jsx"
+    },
+    {
+      "label": "NotFound()",
+      "file_type": "code",
+      "source_file": "src\\pages\\NotFound.jsx",
+      "source_location": "L4",
+      "id": "pages_notfound_notfound",
+      "community": 14,
+      "norm_label": "notfound()"
+    },
+    {
+      "label": "Portfolio.jsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Portfolio.jsx",
+      "source_location": "L1",
+      "id": "src_pages_portfolio_jsx",
+      "community": 15,
+      "norm_label": "portfolio.jsx"
+    },
+    {
+      "label": "Portfolio()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Portfolio.jsx",
+      "source_location": "L21",
+      "id": "pages_portfolio_portfolio",
+      "community": 15,
+      "norm_label": "portfolio()"
+    },
+    {
+      "label": "Services.jsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Services.jsx",
+      "source_location": "L1",
+      "id": "src_pages_services_jsx",
+      "community": 16,
+      "norm_label": "services.jsx"
+    },
+    {
+      "label": "Services()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Services.jsx",
+      "source_location": "L16",
+      "id": "pages_services_services",
+      "community": 16,
+      "norm_label": "services()"
+    },
+    {
+      "label": "Testimonials.jsx",
+      "file_type": "code",
+      "source_file": "src\\pages\\Testimonials.jsx",
+      "source_location": "L1",
+      "id": "src_pages_testimonials_jsx",
+      "community": 17,
+      "norm_label": "testimonials.jsx"
+    },
+    {
+      "label": "Testimonials()",
+      "file_type": "code",
+      "source_file": "src\\pages\\Testimonials.jsx",
+      "source_location": "L13",
+      "id": "pages_testimonials_testimonials",
+      "community": 17,
+      "norm_label": "testimonials()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "src_app_jsx",
+      "_tgt": "src_app_scrolltotop",
+      "source": "src_app_jsx",
+      "target": "src_app_scrolltotop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\App.jsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "src_app_jsx",
+      "_tgt": "src_app_app",
+      "source": "src_app_jsx",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\BackToTop.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_backtotop_jsx",
+      "_tgt": "components_backtotop_backtotop",
+      "source": "src_components_backtotop_jsx",
+      "target": "components_backtotop_backtotop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Counter.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_counter_jsx",
+      "_tgt": "components_counter_counter",
+      "source": "src_components_counter_jsx",
+      "target": "components_counter_counter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Cursor.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_cursor_jsx",
+      "_tgt": "components_cursor_cursor",
+      "source": "src_components_cursor_jsx",
+      "target": "components_cursor_cursor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Footer.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_footer_jsx",
+      "_tgt": "components_footer_footer",
+      "source": "src_components_footer_jsx",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Layout.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_src": "src_components_layout_jsx",
+      "_tgt": "components_layout_layout",
+      "source": "src_components_layout_jsx",
+      "target": "components_layout_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src\\components\\Layout.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "components_layout_layout",
+      "_tgt": "hooks_usereveal_usereveal",
+      "source": "components_layout_layout",
+      "target": "hooks_usereveal_usereveal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Loader.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_loader_jsx",
+      "_tgt": "components_loader_loader",
+      "source": "src_components_loader_jsx",
+      "target": "components_loader_loader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Navbar.jsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "src_components_navbar_jsx",
+      "_tgt": "components_navbar_megaitem",
+      "source": "src_components_navbar_jsx",
+      "target": "components_navbar_megaitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Navbar.jsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "src_components_navbar_jsx",
+      "_tgt": "components_navbar_navbar",
+      "source": "src_components_navbar_jsx",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\PageHero.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_pagehero_jsx",
+      "_tgt": "components_pagehero_pagehero",
+      "source": "src_components_pagehero_jsx",
+      "target": "components_pagehero_pagehero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Particles.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_particles_jsx",
+      "_tgt": "components_particles_particles",
+      "source": "src_components_particles_jsx",
+      "target": "components_particles_particles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\Typewriter.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_components_typewriter_jsx",
+      "_tgt": "components_typewriter_typewriter",
+      "source": "src_components_typewriter_jsx",
+      "target": "components_typewriter_typewriter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\hooks\\useReveal.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "src_hooks_usereveal_js",
+      "_tgt": "hooks_usereveal_usereveal",
+      "source": "src_hooks_usereveal_js",
+      "target": "hooks_usereveal_usereveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\About.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "src_pages_about_jsx",
+      "_tgt": "pages_about_about",
+      "source": "src_pages_about_jsx",
+      "target": "pages_about_about",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Contact.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "src_pages_contact_jsx",
+      "_tgt": "pages_contact_isemail",
+      "source": "src_pages_contact_jsx",
+      "target": "pages_contact_isemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Contact.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "src_pages_contact_jsx",
+      "_tgt": "pages_contact_contact",
+      "source": "src_pages_contact_jsx",
+      "target": "pages_contact_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Home.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "src_pages_home_jsx",
+      "_tgt": "pages_home_home",
+      "source": "src_pages_home_jsx",
+      "target": "pages_home_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\NotFound.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "src_pages_notfound_jsx",
+      "_tgt": "pages_notfound_notfound",
+      "source": "src_pages_notfound_jsx",
+      "target": "pages_notfound_notfound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Portfolio.jsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "src_pages_portfolio_jsx",
+      "_tgt": "pages_portfolio_portfolio",
+      "source": "src_pages_portfolio_jsx",
+      "target": "pages_portfolio_portfolio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Services.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "src_pages_services_jsx",
+      "_tgt": "pages_services_services",
+      "source": "src_pages_services_jsx",
+      "target": "pages_services_services",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\pages\\Testimonials.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "src_pages_testimonials_jsx",
+      "_tgt": "pages_testimonials_testimonials",
+      "source": "src_pages_testimonials_jsx",
+      "target": "pages_testimonials_testimonials",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

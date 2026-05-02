@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
+import ptLogo from '../../PT logo Background removed.png'
 
 const megaCols = [
   {
@@ -41,9 +42,10 @@ const megaCols = [
   },
 ]
 
-function MegaItem({ icon, title, sub }) {
+function MegaItem({ icon, title, sub, closeMenu }) {
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
   return (
-    <Link className="mega-link" to="/services">
+    <Link className="mega-link" to={`/services#${slug}`} onClick={closeMenu}>
       <span className="mega-icon"><i className={icon}></i></span>
       <span className="mega-text">
         <span className="mega-title">{title}</span>
@@ -64,7 +66,12 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false)
     setMegaOpen(false)
-  }, [location.pathname])
+  }, [location.pathname, location.hash])
+
+  const closeMenu = () => {
+    setMobileOpen(false)
+    setMegaOpen(false)
+  }
 
   // Scroll glass effect
   useEffect(() => {
@@ -92,14 +99,22 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? ' scrolled' : ''}`} id="navbar">
       <div className="container nav-inner">
         <Link to="/" className="logo" data-cursor="hover">
-          <span className="dot"></span>
-          Para<span className="grad">tech</span>
+          <img className="pt-logo-img" src={ptLogo} alt="ParaTech" />
         </Link>
 
         <nav className="nav-links" aria-label="Primary">
           <NavLink to="/" end>Home</NavLink>
 
-          <div className={`has-mega${megaOpen ? ' open' : ''}`} ref={megaRef}>
+          <div 
+            className={`has-mega${megaOpen ? ' open' : ''}`} 
+            ref={megaRef}
+            onMouseEnter={() => {
+              if (window.matchMedia('(min-width: 901px)').matches) setMegaOpen(true)
+            }}
+            onMouseLeave={() => {
+              if (window.matchMedia('(min-width: 901px)').matches) setMegaOpen(false)
+            }}
+          >
             <NavLink
               to="/services"
               aria-haspopup="true"
@@ -122,7 +137,7 @@ export default function Navbar() {
                         <h5>{col.title}</h5>
                         <ul>
                           {col.items.map(([icon, t, s], j) => (
-                            <li key={j}><MegaItem icon={icon} title={t} sub={s} /></li>
+                            <li key={j}><MegaItem icon={icon} title={t} sub={s} closeMenu={closeMenu} /></li>
                           ))}
                         </ul>
                       </>
@@ -132,7 +147,7 @@ export default function Navbar() {
                         <h5>{sec.title}</h5>
                         <ul>
                           {sec.items.map(([icon, t, s], j) => (
-                            <li key={j}><MegaItem icon={icon} title={t} sub={s} /></li>
+                            <li key={j}><MegaItem icon={icon} title={t} sub={s} closeMenu={closeMenu} /></li>
                           ))}
                         </ul>
                       </div>
@@ -145,13 +160,12 @@ export default function Navbar() {
 
           <NavLink to="/about">About</NavLink>
           <NavLink to="/portfolio">Portfolio</NavLink>
-          <NavLink to="/testimonials">Testimonials</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </nav>
 
         <div className="nav-cta">
           <Link to="/contact" className="btn btn-glow" data-cursor="hover">
-            Get In Touch <i className="fas fa-arrow-right"></i>
+            Get Free Audit
           </Link>
           <button
             className={`hamburger${mobileOpen ? ' active' : ''}`}
@@ -169,7 +183,6 @@ export default function Navbar() {
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/portfolio">Portfolio</NavLink>
-        <NavLink to="/testimonials">Testimonials</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <Link to="/contact" className="btn btn-primary mobile-cta">
           Get in Touch <i className="fas fa-arrow-right"></i>

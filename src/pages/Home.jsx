@@ -1,99 +1,164 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Particles from '../components/Particles.jsx'
-import Typewriter from '../components/Typewriter.jsx'
 import Counter from '../components/Counter.jsx'
+import seoImage from '../../SEO optimization.png'
+import localSeoImage from '../../Local SEO.png'
+import webDesignImage from '../../Web Design.png'
 
-const services = [
-  ['fas fa-code', 'Web Design & Development', 'Custom, lightning-fast, fully responsive websites built with modern technologies and conversion in mind.'],
-  ['fas fa-search', 'SEO Optimization', 'Rank higher, get found, and grow organically with data-driven SEO strategies tailored to your niche.'],
-  ['fas fa-bullhorn', 'Social Media Marketing', 'Engage audiences, build communities, and convert followers into loyal customers across every platform.'],
-  ['fas fa-shopping-cart', 'E-Commerce Solutions', 'Powerful, scalable online stores on Shopify, WooCommerce, and custom platforms that maximize conversions.'],
-  ['fas fa-envelope-open-text', 'Email Marketing', 'Targeted, automated campaigns and funnels that nurture leads and drive predictable revenue.'],
-  ['fas fa-chart-line', 'Google Ads / PPC', 'Paid search and social campaigns engineered for maximum ROI, with full transparency and reporting.'],
+const skills = [
+  {
+    title: 'SEO',
+    image: seoImage,
+    desc: 'Improve rankings, site health, and organic visibility with focused search strategy.',
+  },
+  {
+    title: 'Google Map Optimization',
+    image: localSeoImage,
+    desc: 'Improve your presence in Google Maps with accurate listings, reviews, categories, and location signals.',
+  },
+  {
+    title: 'Web Design',
+    image: webDesignImage,
+    desc: 'Fast, polished, mobile-friendly websites designed to turn visitors into leads.',
+  },
+]
+
+const faqs = [
+  {
+    question: 'What services does your digital marketing agency offer?',
+    answer: 'Our digital marketing agency provides a wide range of services, including website design, web development, search engine optimization (SEO), social media marketing, video production, web copywriting, pay-per-click advertising, software development, and more.',
+  },
+  {
+    question: 'How much does your digital marketing agency charge for its services?',
+    answer: 'Our digital marketing agency’s pricing varies depending on the services we provide to our clients. We present a detailed quote as part of our customized package after a thorough discussion of the projects with the client.',
+  },
+  {
+    question: 'Can you provide any examples of your previously successful projects?',
+    answer: 'We have successfully completed numerous projects for a wide range of clients in various industries. You can look through our portfolio or contact us if you want to see any specific case studies.',
+  },
+  {
+    question: 'How does your digital marketing agency approach a new project?',
+    answer: 'Our team begins by thoroughly analyzing the client’s business and fully comprehending their goals and objectives. We then develop a customized strategy to achieve our clients’ objectives.',
+  },
+  {
+    question: 'How do you ensure that the work you deliver meets the needs & expectations of your clients?',
+    answer: 'We prioritize effective client communication and ensure that the work we deliver meets their expectations. We strive to meet the highest quality standards by utilizing a quality assurance process.',
+  },
+  {
+    question: 'Do you stay up to date with the latest trends?',
+    answer: 'Our digital marketing agency provides a wide range of services, including Website Design, Web Development, Search Engine Optimization (SEO), Social Media Marketing, Video Production, Web Copywriting, Pay-Per-Click Advertising, Software Development, and more.',
+  },
 ]
 
 export default function Home() {
+  useEffect(() => {
+    document.body.setAttribute('data-page', 'home')
+    return () => document.body.removeAttribute('data-page')
+  }, [])
   return (
     <>
-      <section className="hero" id="home">
-        <Particles />
-        <div className="hero-grid-overlay" aria-hidden="true"></div>
-
-        <div className="floating-badges" aria-hidden="true">
-          <div className="badge b1"><i className="fas fa-users"></i> 200+ Clients</div>
-          <div className="badge b2"><i className="fas fa-rocket"></i> 500+ Projects</div>
-          <div className="badge b3"><i className="fas fa-star"></i> 5★ Rated</div>
-          <div className="badge b4"><i className="fas fa-award"></i> Award Winning</div>
-        </div>
-
-        <div className="container">
-          <div className="hero-content">
-            <span className="eyebrow reveal">★ Premium Digital Agency</span>
+      <section className="home-reference-hero" id="home">
+        <div className="container home-hero-grid">
+          <div className="home-hero-copy">
+            <span className="home-kicker reveal">Digital Growth Partner</span>
             <h1 className="reveal delay-1">
-              <Typewriter />
-              <br />
-              for Modern Brands
+              We Grow Businesses With Smart <span>Digital Solutions</span>
             </h1>
-            <p className="hero-sub reveal delay-2">
-              Premium Web Development &amp; SEO Agency — Trusted by 200+ Businesses to design, build, and grow high-performance digital experiences.
+            <p className="reveal delay-2">
+              From SEO to full-scale marketing and development, we deliver results that drive traffic, leads, and real growth.
             </p>
-            <div className="hero-cta reveal delay-3">
-              <Link to="/contact" className="btn btn-primary" data-cursor="hover">Start Your Project <i className="fas fa-arrow-right"></i></Link>
-              <Link to="/portfolio" className="btn btn-outline" data-cursor="hover"><i className="fas fa-play"></i> View Our Work</Link>
+            <div className="home-hero-actions reveal delay-3">
+              <Link to="/contact" className="btn btn-primary" data-cursor="hover">Get Started</Link>
+              <Link to="/services" className="btn btn-outline" data-cursor="hover">
+                Our Services <i className="fas fa-chevron-right"></i>
+              </Link>
+            </div>
+          </div>
+
+          <div className="home-hero-visual reveal delay-2" aria-label="Website growth report">
+            <div className="monitor-card">
+              <div className="traffic-panel">
+                <span>Website Traffic</span>
+                <strong>+250%</strong>
+                <svg viewBox="0 0 420 190" aria-hidden="true">
+                  <polyline points="18,146 68,106 118,142 174,94 224,47 282,118 334,66 381,90 410,34" />
+                  <path d="M392 29 L414 31 L405 53" />
+                </svg>
+              </div>
+              <div className="mini-panels">
+                <div className="lead-panel">
+                  <div className="donut" aria-hidden="true"></div>
+                  <div>
+                    <span>Leads Generated</span>
+                    <strong>+180%</strong>
+                  </div>
+                </div>
+                <div>
+                  <span>Ranked Keywords</span>
+                  <strong>#1</strong>
+                  <small>+156%</small>
+                </div>
+              </div>
+              <div className="monitor-stand" aria-hidden="true"></div>
             </div>
           </div>
         </div>
-
-        <a href="#stats" className="scroll-indicator" aria-label="Scroll down">
-          <div className="mouse" aria-hidden="true"></div>
-          <span>Scroll</span>
-        </a>
       </section>
 
       <section className="stats" id="stats">
         <div className="container">
           <div className="stats-grid">
             <div className="stat-card reveal"><Counter target={200} suffix="+" /><div className="stat-label">Happy Clients</div></div>
-            <div className="stat-card reveal delay-1"><Counter target={500} suffix="+" /><div className="stat-label">Projects Delivered</div></div>
-            <div className="stat-card reveal delay-2"><Counter target={5} suffix="+" /><div className="stat-label">Years Experience</div></div>
-            <div className="stat-card reveal delay-3"><Counter target={98} suffix="%" /><div className="stat-label">Client Satisfaction</div></div>
+            <div className="stat-card reveal delay-1"><Counter target={112} /><div className="stat-label">Professionals Joined Forces</div></div>
+            <div className="stat-card reveal delay-2"><Counter target={8} suffix="+" /><div className="stat-label">Years Experience</div></div>
+            <div className="stat-card reveal delay-3"><Counter target={226} /><div className="stat-label">Businesses Digitalized</div></div>
           </div>
         </div>
       </section>
 
-      <div className="section-divider"></div>
-
-      <section>
+      <section className="home-skills-section">
         <div className="container">
           <div className="section-head reveal">
-            <span className="eyebrow">Our Services</span>
-            <h2>What We <span className="grad">Do Best</span></h2>
-            <p>Full-stack digital solutions engineered to elevate your brand, drive measurable growth, and outperform the competition.</p>
+            <span className="eyebrow">Our Skills</span>
+            <h2>Focused Services For <span className="grad">Growth</span></h2>
+            <p>Start with the three essentials: SEO, Google Map Optimization, and Web Design.</p>
           </div>
 
-          <div className="services-grid">
-            {services.map(([icon, title, desc], i) => (
-              <article key={i} className={`service-card reveal${i % 3 ? ` delay-${i % 3}` : ''}`} data-cursor="hover">
-                <div className="service-icon"><i className={icon}></i></div>
-                <h3>{title}</h3>
-                <p>{desc}</p>
-                <Link to="/services" className="service-link">Learn More <i className="fas fa-arrow-right"></i></Link>
+          <div className="home-skills-grid">
+            {skills.map((skill, i) => (
+              <article className={`home-skill-card reveal${i ? ` delay-${i}` : ''}`} key={skill.title}>
+                <img src={skill.image} alt={`${skill.title} preview`} />
+                <div>
+                  <h3>{skill.title}</h3>
+                  <p>{skill.desc}</p>
+                  <Link to="/services" className="service-link">
+                    Learn More <i className="fas fa-arrow-right"></i>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
-
-          <div style={{ textAlign: 'center', marginTop: 48 }} className="reveal">
-            <Link to="/services" className="btn btn-primary" data-cursor="hover">View All Services <i className="fas fa-arrow-right"></i></Link>
-          </div>
         </div>
       </section>
 
-      <section className="cta-banner">
-        <div className="container reveal">
-          <span className="eyebrow">Let&rsquo;s Talk</span>
-          <h2>Ready to <span className="grad">Grow Online?</span></h2>
-          <p>Get a free 30-minute consultation. We&rsquo;ll review your goals, audit your current presence, and outline a tailored growth plan.</p>
-          <Link to="/contact" className="btn btn-primary" data-cursor="hover">Start Your Project <i className="fas fa-arrow-right"></i></Link>
+      <section className="home-faq-section">
+        <div className="container home-faq-grid">
+          <div className="home-faq-title reveal">
+            <span>FAQs</span>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+
+          <div className="home-faq-list reveal delay-1">
+            {faqs.map((faq, i) => (
+              <details key={faq.question} className="faq-item" open={i === 0}>
+                <summary>
+                  {faq.question}
+                  <i className="fas fa-chevron-down" aria-hidden="true"></i>
+                </summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
     </>
